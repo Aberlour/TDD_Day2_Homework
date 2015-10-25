@@ -3,6 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using PotterShoppingCart.Lib;
 
 namespace PotterShoppingCart.Tests
 {
@@ -66,16 +67,18 @@ namespace PotterShoppingCart.Tests
         public void PaymentTest_第一集買了一本_其他都沒買_價格應為100元()
         {
             //arrange
-            var shoppingList = new List<BookInfo>();
-            shoppingList.Add(new BookInfo()
-                                 {
-                                     Name="哈利波特第一集",
-                                     Price=100
-                                 });
+            var shoppingList = new List<BookInfo>
+                                   {
+                                       new BookInfo()
+                                           {
+                                               Name = "哈利波特第一集",
+                                               Price = 100
+                                           }
+                                   };
             var target = BookShop.GetBookShop();
 
             //act
-            int acctual = target.CheckBooks(shoppingList);
+            int acctual = target.CheckCart(shoppingList);
 
             //assert
             var expected = 100;
