@@ -72,6 +72,9 @@ namespace PotterShoppingCart.Lib
                     case 2:
                         sumPrice += originPrice * 0.95;
                         break;
+                    case 3:
+                        sumPrice += originPrice * 0.9;
+                        break;
                 }
             }
             return Convert.ToInt32(sumPrice);
