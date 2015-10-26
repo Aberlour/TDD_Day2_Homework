@@ -8,6 +8,6 @@ namespace PotterShoppingCart.Lib
     public class BookInfo
     {
         public string Name { get; set; }
-        public int Price { get; set; }
+        public double Price { get; set; }
     }
 }
