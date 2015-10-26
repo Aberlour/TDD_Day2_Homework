@@ -143,5 +143,42 @@ namespace PotterShoppingCart.Tests
             var expected = 270;
             Assert.AreEqual(expected, acctual);
         }
+
+        [TestMethod]
+        public void PaymentTest_一二三四集各買了一本_價格應為320()
+        {
+            //arrange
+            var shoppingList = new List<BookInfo>
+                                   {
+                                       new BookInfo()
+                                           {
+                                               Name = "哈利波特第一集",
+                                               Price = 100
+                                           },
+                                       new BookInfo()
+                                           {
+                                               Name = "哈利波特第二集",
+                                               Price = 100
+                                           },
+                                       new BookInfo()
+                                           {
+                                               Name = "哈利波特第三集",
+                                               Price = 100
+                                           },
+                                       new BookInfo()
+                                           {
+                                               Name = "哈利波特第三集",
+                                               Price = 100
+                                           }
+                                   };
+            var target = BookShop.GetBookShop();
+
+            //act
+            int acctual = target.CheckCart(shoppingList);
+
+            //assert
+            var expected = 320;
+            Assert.AreEqual(expected, acctual);
+        }
     }
 }
