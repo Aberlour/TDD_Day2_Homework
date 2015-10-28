@@ -37,7 +37,7 @@ namespace PotterShoppingCart.Lib
                 var isDepulicated = false;
                 foreach (var discountGroup in discountGroups)
                 {
-                    if (discountGroup.Contains(bookInfo) == false)
+                    if (discountGroup.Any(s=>s.Name.Equals(bookInfo.Name)) == false)
                     {
                         discountGroup.Add(bookInfo);
                     }
