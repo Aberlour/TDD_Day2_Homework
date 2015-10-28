@@ -167,7 +167,7 @@ namespace PotterShoppingCart.Tests
                                            },
                                        new BookInfo()
                                            {
-                                               Name = "哈利波特第三集",
+                                               Name = "哈利波特第四集",
                                                Price = 100
                                            }
                                    };

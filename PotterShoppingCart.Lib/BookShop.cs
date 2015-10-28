@@ -14,43 +14,49 @@ namespace PotterShoppingCart.Lib
 
         public int CheckCart(List<BookInfo> shoppingList)
         {
-            var discountGroups = GetDiscountGroups(shoppingList);
-            return CalculatePrice(discountGroups);
+            var discountGroups = DiscountGroup.NewDiscountGroup();
+            discountGroups.AddBooks(shoppingList);
+            return discountGroups.GetTotalPrice();
+        }
+    }
+
+    public class DiscountGroup
+    {
+        readonly List<List<BookInfo>> _discountGroups;
+        private DiscountGroup()
+        {
+            _discountGroups = new List<List<BookInfo>>() {new List<BookInfo>()};
         }
 
-        /// <summary>
-        /// 取得折扣群組
-        /// </summary>
-        /// <param name="shoppingList">購物車內容</param>
-        /// <returns></returns>
-        private IEnumerable<List<BookInfo>> GetDiscountGroups(IEnumerable<BookInfo> shoppingList)
+        public static DiscountGroup NewDiscountGroup()
         {
-            var discountGroups = new List<List<BookInfo>>();
-            foreach (var bookInfo in shoppingList)
-            {
-                if (discountGroups.Any() == false)
-                {
-                    discountGroups.Add(new List<BookInfo>() { bookInfo });
-                    continue;
-                }
+            return new DiscountGroup();
+        }
 
+        public void AddBooks(List<BookInfo> shoppingBooks)
+        {
+            foreach (var bookInfo in shoppingBooks)
+            {
                 var isDepulicated = false;
-                foreach (var discountGroup in discountGroups)
+                foreach (var discountGroup in _discountGroups)
                 {
-                    if (discountGroup.Any(s=>s.Name.Equals(bookInfo.Name)) == false)
+                    isDepulicated = discountGroup.Any(s => s.Name.Equals(bookInfo.Name));
+                    if (isDepulicated == false)
                     {
                         discountGroup.Add(bookInfo);
-                    }
-                    else
-                    {
-                        isDepulicated = true;
+                        break;
                     }
                 }
 
                 if (isDepulicated)
-                    discountGroups.Add(new List<BookInfo>() { bookInfo });
+                    _discountGroups.Add(new List<BookInfo>() {bookInfo});
             }
-            return discountGroups;
+
+        }
+
+        public int GetTotalPrice()
+        {
+            return CalculatePrice(_discountGroups);
         }
 
         /// <summary>
