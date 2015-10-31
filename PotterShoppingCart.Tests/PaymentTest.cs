@@ -72,7 +72,8 @@ namespace PotterShoppingCart.Tests
                                        new BookInfo()
                                            {
                                                Name = "哈利波特第一集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            }
                                    };
             var target = BookShop.GetBookShop();
@@ -94,12 +95,14 @@ namespace PotterShoppingCart.Tests
                                        new BookInfo()
                                            {
                                                Name = "哈利波特第一集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            },
                                         new BookInfo()
                                            {
                                                Name = "哈利波特第二集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            }
                                    };
             var target = BookShop.GetBookShop();
@@ -121,17 +124,20 @@ namespace PotterShoppingCart.Tests
                                        new BookInfo()
                                            {
                                                Name = "哈利波特第一集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            },
                                        new BookInfo()
                                            {
                                                Name = "哈利波特第二集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            },
                                        new BookInfo()
                                            {
                                                Name = "哈利波特第三集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            }
                                    };
             var target = BookShop.GetBookShop();
@@ -153,22 +159,26 @@ namespace PotterShoppingCart.Tests
                                        new BookInfo()
                                            {
                                                Name = "哈利波特第一集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            },
                                        new BookInfo()
                                            {
                                                Name = "哈利波特第二集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            },
                                        new BookInfo()
                                            {
                                                Name = "哈利波特第三集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            },
                                        new BookInfo()
                                            {
                                                Name = "哈利波特第四集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            }
                                    };
             var target = BookShop.GetBookShop();
@@ -190,27 +200,32 @@ namespace PotterShoppingCart.Tests
                                        new BookInfo()
                                            {
                                                Name = "哈利波特第一集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            },
                                        new BookInfo()
                                            {
                                                Name = "哈利波特第二集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            },
                                        new BookInfo()
                                            {
                                                Name = "哈利波特第三集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            },
                                        new BookInfo()
                                            {
                                                Name = "哈利波特第四集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            },
                                        new BookInfo()
                                            {
                                                Name = "哈利波特第五集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            }
                                    };
             var target = BookShop.GetBookShop();
@@ -232,22 +247,26 @@ namespace PotterShoppingCart.Tests
                                        new BookInfo()
                                            {
                                                Name = "哈利波特第一集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            },
                                        new BookInfo()
                                            {
                                                Name = "哈利波特第二集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            },
                                        new BookInfo()
                                            {
                                                Name = "哈利波特第三集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            },
                                        new BookInfo()
                                            {
                                                Name = "哈利波特第三集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            }
                                    };
             var target = BookShop.GetBookShop();
@@ -269,27 +288,32 @@ namespace PotterShoppingCart.Tests
                                        new BookInfo()
                                            {
                                                Name = "哈利波特第一集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            },
                                        new BookInfo()
                                            {
                                                Name = "哈利波特第二集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            },
                                        new BookInfo()
                                            {
                                                Name = "哈利波特第二集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            },
                                        new BookInfo()
                                            {
                                                Name = "哈利波特第三集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            },
                                        new BookInfo()
                                            {
                                                Name = "哈利波特第三集",
-                                               Price = 100
+                                               Price = 100,
+                                               DiscountType = DiscountType.HarryPotter
                                            }
                                    };
             var target = BookShop.GetBookShop();
